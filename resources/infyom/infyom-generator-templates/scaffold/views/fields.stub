@@ -1,0 +1,9 @@
+$FIELDS$
+
+<!-- Submit Field -->
+<div class="form-group m-b-0">
+    <div class="col-sm-offset-3 col-sm-9 text-right">
+        <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') !!}" class="btn btn-default">Cancelar</a>
+        {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
+    </div>
+</div>

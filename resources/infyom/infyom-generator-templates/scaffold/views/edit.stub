@@ -1,0 +1,32 @@
+@extends('layouts.app')
+
+@section('title', 'Editar $MODEL_NAME_PLURAL_HUMAN$')
+
+@section('breadcrumb')
+    <li class="breadcrumb-item ">
+        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}">
+            $MODEL_NAME_PLURAL_HUMAN$
+        </a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$) }}">
+            {{ $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$ }}
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Editar</li>
+@endsection
+
+@section('content')
+    <div class="col-md-6">
+        <div class="white-box">
+            <h3 class="box-title m-b-0">$MODEL_NAME_HUMAN$</h3>
+            <p class="text-muted m-b-30 font-13"> Lorem ipsum ... </p>
+                {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 
+                    'method' => 'patch', 'class' => 'form-horizontal']) !!}
+
+                    @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+
+                {!! Form::close() !!}
+        </div>
+    </div>
+@endsection

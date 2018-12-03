@@ -1,0 +1,10 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+        <div class="input-group">
+            {!! Form::text('$FIELD_NAME$', null, ['class' => 'form-control', 'id' => '$FIELD_NAME$']) !!}
+            <div class="input-group-addon"><i class="ti-user"></i></div>
+        </div>
+    </div>
+</div>
