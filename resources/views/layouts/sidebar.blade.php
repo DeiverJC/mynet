@@ -1,41 +1,30 @@
-<aside class="main-sidebar" id="sidebar-wrapper">
-
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel">
-            <div class="pull-left image">
-                <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"
-                     alt="User Image"/>
-            </div>
-            <div class="pull-left info">
-                @if (Auth::guest())
-                <p>InfyOm</p>
-                @else
-                    <p>{{ Auth::user()->name}}</p>
-                @endif
-                <!-- Status -->
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav slimscrollsidebar">
+        <div class="sidebar-head">
+            <h3>
+                <span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> 
+                <span class="hide-menu">{{ config('app.name') }}</span>
+            </h3> 
         </div>
-
-        <!-- search form (Optional) -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search..."/>
-          <span class="input-group-btn">
-            <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
-            </button>
-          </span>
+            <div class="user-profile">
+                <div class="dropdown user-pro-body">
+                    <div><img src="{{ asset('/ampleadmin/plugins/images/users/varun.jpg') }}" alt="user-img" class="img-circle"></div>
+                    <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Steave Gection <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu animated flipInY">
+                        <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                        <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                        <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                </div>
             </div>
-        </form>
-        <!-- Sidebar Menu -->
-
-        <ul class="sidebar-menu" data-widget="tree">
+        <ul class="nav" id="side-menu">
             @include('layouts.menu')
         </ul>
-        <!-- /.sidebar-menu -->
-    </section>
-    <!-- /.sidebar -->
-</aside>
+    </div>
+</div>
