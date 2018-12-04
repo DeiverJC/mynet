@@ -6,6 +6,7 @@
 </li>
 
 
+
 <li>
     <a href="{{ route('posts.index') }}" class="waves-effect {{ Request::is('posts*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
