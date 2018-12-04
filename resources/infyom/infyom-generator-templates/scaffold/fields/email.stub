@@ -1,10 +1,10 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-group">
-    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:', ['class' => 'col-sm-3 control-label']) !!}
-    <div class="col-sm-9">
-        <div class="input-group">
-            {!! Form::email('$FIELD_NAME$', null, ['class' => 'form-control', 'id' => '$FIELD_NAME$']) !!}
-            <div class="input-group-addon"><i class="ti-email"></i></div>
-        </div>
+<div class="form-group {{ $errors->has('$FIELD_NAME$') ? ' has-error' : '' }}">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        {!! Form::email('$FIELD_NAME$', null, ['class' => 'form-control', 'id' => '$FIELD_NAME$']) !!}
+        @if ($errors->has('$FIELD_NAME$'))
+            <span class="help-block">{{ $errors->first('$FIELD_NAME$') }}</span> 
+        @endif
     </div>
 </div>

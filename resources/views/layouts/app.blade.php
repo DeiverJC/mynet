@@ -54,7 +54,7 @@
                             @if(Request::is('home'))
                                 <li class="active"> <i class="fa fa-home"></i> Inicio</li>
                             @else
-                                <li><a href="#">Inicio</a></li>
+                                <li><a href="{{ route('home') }}">Inicio</a></li>
                             @endif
 
                             @yield('breadcrumb')
