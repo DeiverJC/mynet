@@ -1,0 +1,68 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "tipo_identificacion",
+        "dbType": "string",
+        "htmlType": "select,cedula,tarjeta identidad,cedula extranjeria,pasaporte",
+        "searchable": false
+    },
+    {
+        "name": "identificacion",
+        "dbType": "integer",
+        "htmlType": "number",
+        "searchable": true
+    },
+    {
+        "name": "direccion",
+        "dbType": "string",
+        "htmlType": "text"  
+    },
+    {
+        "name": "ciudad",
+        "dbType": "string",
+        "htmlType": "text"
+    },
+    {
+        "name": "departamento",
+        "dbType": "string",
+        "htmlType": "text"  
+    },
+    {
+        "name": "tipo_contacto_id",
+        "dbType": "integer:unsigned:default,0:foreign,contacts,id",
+        "htmlType": "text",
+        "relation": "mt1,TypeContact,tipo_contacto_id,id"
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]
