@@ -16,7 +16,10 @@
         "htmlType": "text",
         "searchable": false
     },
-   
+    {
+        "type": "relation",
+        "relation": "1tm,Contact"
+    },
     {
         "name": "observacion",
         "dbType": "string",

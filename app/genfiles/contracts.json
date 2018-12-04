@@ -1,0 +1,60 @@
+
+[
+{
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+},
+{
+    "name": "fecha_inicio",
+    "dbType": "dateTime",
+    "htmlType": "date",
+    "searchable": true
+},
+{
+    "name": "fecha_final",
+    "dbType": "dateTime",
+    "htmlType": "date",
+    "searchable": true
+},
+{
+    "name": "terminos_pago",
+    "dbType": "string",
+    "htmlType": "select,15 dias,30 dias,60 dias,Manual",
+    "searchable": true
+},
+{
+    "name": "contactos_id",
+    "dbType": "integer:unsigned:default,0:foreign,contracts,id",
+    "htmlType": "text",
+    "relation": "mt1,Contact,contactos_id,id"
+},
+{
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+},
+{
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+}
+]

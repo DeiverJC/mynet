@@ -58,12 +58,7 @@
     {!! Form::label('tipo_contacto_id', 'Tipo Contacto Id:', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         <div class="input-group">
-            <select class="form-control" id="tipo_contacto_id" name="tipo_contacto_id" >
-                    
-                @foreach($type_contacts as $type_contact)
-                       <option value="{{ $type_contact->id }}">{{ $type_contact->nombre}}</option>  
-                @endforeach
-             </select>
+            {!! Form::text('tipo_contacto_id', null, ['class' => 'form-control', 'id' => 'tipo_contacto_id']) !!}
             <div class="input-group-addon"><i class="ti-user"></i></div>
         </div>
     </div>

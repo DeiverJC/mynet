@@ -33,12 +33,7 @@
 
 
 
-<li>
-    <a href="{{ route('typeContacts.index') }}" class="waves-effect {{ Request::is('typeContacts*') ? 'active' : '' }}">
-        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Type Contacts</span>
-    </a> 
-</li>
+
 
 <li>
     <a href="{{ route('contacts.index') }}" class="waves-effect {{ Request::is('contacts*') ? 'active' : '' }}">
@@ -46,4 +41,7 @@
         <span class="hide-menu">Contacts</span>
     </a> 
 </li>
+
+
+
 

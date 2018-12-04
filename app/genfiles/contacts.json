@@ -23,6 +23,16 @@
         "searchable": true
     },
     {
+        "name": "nombre",
+        "dbType": "string",
+        "htmlType": "text"  
+    },
+    {
+        "name": "apellido",
+        "dbType": "string",
+        "htmlType": "text"  
+    },
+    {
         "name": "direccion",
         "dbType": "string",
         "htmlType": "text"  
@@ -42,6 +52,10 @@
         "dbType": "integer:unsigned:default,0:foreign,contacts,id",
         "htmlType": "text",
         "relation": "mt1,TypeContact,tipo_contacto_id,id"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Contract"
     },
     {
         "name": "created_at",

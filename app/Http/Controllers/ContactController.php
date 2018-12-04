@@ -9,7 +9,6 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
-use\App\Models\TypeContact;
 use Response;
 
 class ContactController extends AppBaseController
@@ -44,8 +43,7 @@ class ContactController extends AppBaseController
      */
     public function create()
     {
-        $type_contacts = TypeContact::all();
-        return view('contacts.create',compact('type_contacts'));
+        return view('contacts.create');
     }
 
     /**
@@ -58,7 +56,6 @@ class ContactController extends AppBaseController
     public function store(CreateContactRequest $request)
     {
         $input = $request->all();
-        $type_contacts = TypeContact::all();
 
         $contact = $this->contactRepository->create($input);
 
@@ -96,7 +93,6 @@ class ContactController extends AppBaseController
      */
     public function edit($id)
     {
-        $type_contacts = TypeContact::all();
         $contact = $this->contactRepository->findWithoutFail($id);
 
         if (empty($contact)) {
@@ -105,7 +101,7 @@ class ContactController extends AppBaseController
             return redirect(route('contacts.index'));
         }
 
-        return view('contacts.edit',compact('type_contacts'))->with('contact', $contact);
+        return view('contacts.edit')->with('contact', $contact);
     }
 
     /**
@@ -118,7 +114,6 @@ class ContactController extends AppBaseController
      */
     public function update($id, UpdateContactRequest $request)
     {
-        $type_contacts = TypeContact::all();
         $contact = $this->contactRepository->findWithoutFail($id);
 
         if (empty($contact)) {
@@ -131,7 +126,7 @@ class ContactController extends AppBaseController
 
         Flash::success('Contact updated successfully.');
 
-        return redirect(route('contacts.index',compact('type_contacts')));
+        return redirect(route('contacts.index'));
     }
 
     /**

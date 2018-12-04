@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Contact
  * @package App\Models
- * @version December 4, 2018, 1:50 am UTC
+ * @version December 4, 2018, 4:15 am UTC
  *
  * @property \App\Models\TypeContact typeContact
+ * @property \Illuminate\Database\Eloquent\Collection Contract
  * @property string tipo_identificacion
  * @property integer identificacion
  * @property string direccion
@@ -66,5 +67,13 @@ class Contact extends Model
     public function typeContact()
     {
         return $this->belongsTo(\App\Models\TypeContact::class, 'tipo_contacto_id', 'id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function contracts()
+    {
+        return $this->hasMany(\App\Models\Contract::class);
     }
 }
