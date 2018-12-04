@@ -36,6 +36,19 @@
 
 
 
+
+
+
+
+
+
+<li>
+    <a href="{{ route('typeContacts.index') }}" class="waves-effect {{ Request::is('typeContacts*') ? 'active' : '' }}">
+        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
+        <span class="hide-menu">Type Contacts</span>
+    </a> 
+</li>
+
 <li>
     <a href="{{ route('contacts.index') }}" class="waves-effect {{ Request::is('contacts*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
@@ -43,6 +56,10 @@
     </a> 
 </li>
 
-
-
+<li>
+    <a href="{{ route('contracts.index') }}" class="waves-effect {{ Request::is('contracts*') ? 'active' : '' }}">
+        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
+        <span class="hide-menu">Contracts</span>
+    </a> 
+</li>
 

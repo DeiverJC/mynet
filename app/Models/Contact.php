@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Contact
  * @package App\Models
- * @version December 4, 2018, 4:15 am UTC
+ * @version December 4, 2018, 5:17 am UTC
  *
  * @property \App\Models\TypeContact typeContact
  * @property \Illuminate\Database\Eloquent\Collection Contract
  * @property string tipo_identificacion
  * @property integer identificacion
+ * @property string nombre
+ * @property string apellido
  * @property string direccion
  * @property string ciudad
  * @property string departamento
@@ -32,6 +34,8 @@ class Contact extends Model
     public $fillable = [
         'tipo_identificacion',
         'identificacion',
+        'nombre',
+        'apellido',
         'direccion',
         'ciudad',
         'departamento',
@@ -46,6 +50,8 @@ class Contact extends Model
     protected $casts = [
         'tipo_identificacion' => 'string',
         'identificacion' => 'integer',
+        'nombre' => 'string',
+        'apellido' => 'string',
         'direccion' => 'string',
         'ciudad' => 'string',
         'departamento' => 'string',

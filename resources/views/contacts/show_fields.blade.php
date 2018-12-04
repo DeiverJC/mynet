@@ -22,6 +22,22 @@
     </div>
 </div>
 
+<!-- Nombre Field -->
+<div class="form-group">
+    {!! Form::label('nombre', 'Nombre:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        <p class="form-control-static">{!! $contact->nombre !!}</p>
+    </div>
+</div>
+
+<!-- Apellido Field -->
+<div class="form-group">
+    {!! Form::label('apellido', 'Apellido:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        <p class="form-control-static">{!! $contact->apellido !!}</p>
+    </div>
+</div>
+
 <!-- Direccion Field -->
 <div class="form-group">
     {!! Form::label('direccion', 'Direccion:', ['class' => 'control-label col-md-3']) !!}

@@ -3,6 +3,8 @@
         <tr>
             <th>Tipo Identificacion</th>
         <th>Identificacion</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
         <th>Direccion</th>
         <th>Ciudad</th>
         <th>Departamento</th>
@@ -15,6 +17,8 @@
         <tr>
             <td>{!! $contact->tipo_identificacion !!}</td>
             <td>{!! $contact->identificacion !!}</td>
+            <td>{!! $contact->nombre !!}</td>
+            <td>{!! $contact->apellido !!}</td>
             <td>{!! $contact->direccion !!}</td>
             <td>{!! $contact->ciudad !!}</td>
             <td>{!! $contact->departamento !!}</td>
