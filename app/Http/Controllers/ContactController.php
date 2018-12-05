@@ -10,6 +10,8 @@ use App\Repositories\ContactRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use App\Models\ContactType;
+use App\Models\Contact;
 
 class ContactController extends AppBaseController
 {
@@ -29,6 +31,7 @@ class ContactController extends AppBaseController
      */
     public function index(ContactDataTable $contactDataTable)
     {
+        
         return $contactDataTable->render('contacts.index');
     }
 
@@ -39,7 +42,9 @@ class ContactController extends AppBaseController
      */
     public function create()
     {
-        return view('contacts.create');
+        $typeContacts = ContactType::pluck('title', 'id');
+
+        return view('contacts.create', compact('typeContacts'));
     }
 
     /**

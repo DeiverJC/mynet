@@ -2,7 +2,7 @@
 
 return [
     'type_identifications' => [
-        'NIT' =>'Número de identificación tributaria',
+        'NIT' => 'Número de identificación tributaria',
         'CC' => 'Cédula de ciudadanía',
         'DIE' => 'Documento de identificación extrajero',
         'PP' => 'Pasaporte',

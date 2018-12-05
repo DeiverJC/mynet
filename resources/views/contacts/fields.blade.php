@@ -1,19 +1,25 @@
-<!-- Type Contact Id Field -->
-<div class="form-group {{ $errors->has('type_contact_id') ? ' has-error' : '' }}">
-    {!! Form::label('type_contact_id', 'Type Contact Id:', ['class' => 'control-label col-md-3']) !!}
-    <div class="col-md-9">
-        {!! Form::select('type_contact_id', ['Número de identificación tributaria' => 'NIT'], null, ['class' => 'form-control', 'id' => 'type_contact_id']) !!}
-        @if ($errors->has('type_contact_id'))
-            <span class="help-block">{{ $errors->first('type_contact_id') }}</span> 
-        @endif
-    </div>
-</div>
 
 <!-- Type Identification Field -->
 <div class="form-group {{ $errors->has('type_identification') ? ' has-error' : '' }}">
     {!! Form::label('type_identification', 'Type Identification:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
-        {!! Form::select('type_identification', ['Número de identificación tributaria' => 'NIT'], null, ['class' => 'form-control', 'id' => 'type_identification']) !!}
+            {!! Form::select('type_identification',
+            [
+        'NIT' => 'Número de identificación tributaria',
+        'CC' => 'Cédula de ciudadanía',
+        'DIE' => 'Documento de identificación extrajero',
+        'PP' => 'Pasaporte',
+        'CE' => 'Cédula de extranjería',
+        'TE' => 'Tarjeta de extranjería',
+        'TI' => 'Tarjeta de identidad',
+        'RC' => 'Registro civil'
+    ],
+            null, [
+            'class' => 'form-control',
+            'required' => 'required',
+            'placeholder' => 'Elija una opción...']) !!}
+    
+        {{-- {!! Form::select('type_identification', config('options.cities'), null, ['class' => 'form-control', 'id' => 'type_identification']) !!} --}}
         @if ($errors->has('type_identification'))
             <span class="help-block">{{ $errors->first('type_identification') }}</span> 
         @endif
@@ -131,6 +137,20 @@
         @endif
     </div>
 </div>
+<!-- Type Contact Id Field -->
+<div class="form-group {{ $errors->has('type_contact_id') ? ' has-error' : '' }}">
+        {!! Form::label('type_contact_id', 'Type Contact Id:', ['class' => 'control-label col-md-3']) !!}
+        <div class="col-md-9">
+            {!! Form::select('type_contact_id', $typeContacts, null, [
+                'class' => 'form-control', 
+                'id' => 'type_contact_id',
+                'placeholder' => 'Elija una opción'
+            ]) !!}
+            @if ($errors->has('type_contact_id'))
+                <span class="help-block">{{ $errors->first('type_contact_id') }}</span> 
+            @endif
+        </div>
+    </div>
 
 <!-- Observations Field -->
 <div class="form-group {{ $errors->has('observations') ? ' has-error' : '' }}">
