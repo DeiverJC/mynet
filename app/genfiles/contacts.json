@@ -12,7 +12,7 @@
     },
     {
         "name": "type_contact_id",
-        "dbType": "integer:unsigned:default,0:foreign,contacts,id",
+        "dbType": "integer:unsigned:default,0:foreign,type_contacts,id",
         "htmlType": "select,NIT:Número de identificación tributaria",
         "validations": "required",
         "relation": "mt1,TypeContact,tipo_contacto_id,id",
@@ -84,10 +84,6 @@
         "name": "observations",
         "dbType": "text:nullable",
         "htmlType": "textarea"
-    },
-    {
-        "type": "relation",
-        "relation": "1tm,Contract"
     },
     {
         "name": "created_at",
