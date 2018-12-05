@@ -1,0 +1,94 @@
+[ 
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "type_item",
+        "dbType": "string",
+        "htmlType": "select,Servicios:1,Productos:2",
+        "searchable": true,
+        "validations": "required"
+    },
+    {
+        "name": "title",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "refence",
+        "dbType": "string:nullable",
+        "htmlType": "text",
+        "searchable": true
+    },
+    {
+        "name": "sale_price",
+        "dbType": "double:default,0",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "description",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "searchable": false
+    },
+    {
+        "name": "tax",
+        "dbType": "string",
+        "htmlType": "select,iva,iva3",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "unit_measure",
+        "dbType": "string",
+        "htmlType": "select,metro,kilo",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "unit_price",
+        "dbType": "double:default,0",
+        "htmlType": "text",
+        "searchable": true,
+        "validations": "required"
+    },
+    {
+        "name": "initial_amount",
+        "dbType": "integer",
+        "htmlType": "number"
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]

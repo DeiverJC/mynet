@@ -11,47 +11,79 @@
         "inIndex": false 
     },
     {
-        "name": "tipo_identificacion",
-        "dbType": "string",
-        "htmlType": "select,cedula,tarjeta identidad,cedula extranjeria,pasaporte",
-        "searchable": false
-    },
-    {
-        "name": "identificacion",
-        "dbType": "integer",
-        "htmlType": "number",
+        "name": "type_contact_id",
+        "dbType": "integer:unsigned:default,0:foreign,contacts,id",
+        "htmlType": "select,NIT:Número de identificación tributaria",
+        "validations": "required",
+        "relation": "mt1,TypeContact,tipo_contacto_id,id",
         "searchable": true
     },
     {
-        "name": "nombre",
+        "name": "type_identification",
         "dbType": "string",
-        "htmlType": "text"  
+        "htmlType": "select,NIT:Número de identificación tributaria",
+        "validations": "required",
+        "searchable": true
     },
     {
-        "name": "apellido",
-        "dbType": "string",
-        "htmlType": "text"  
+        "name": "indentification",
+        "dbType": "integer",
+        "htmlType": "number",
+        "validations": "required",
+        "searchable": true
     },
     {
-        "name": "direccion",
+        "name": "fullname",
         "dbType": "string",
-        "htmlType": "text"  
-    },
-    {
-        "name": "ciudad",
-        "dbType": "string",
-        "htmlType": "text"
-    },
-    {
-        "name": "departamento",
-        "dbType": "string",
-        "htmlType": "text"  
-    },
-    {
-        "name": "tipo_contacto_id",
-        "dbType": "integer:unsigned:default,0:foreign,contacts,id",
         "htmlType": "text",
-        "relation": "mt1,TypeContact,tipo_contacto_id,id"
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "address",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "state",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "city",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "cellphone",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required|min:10",
+        "searchable": true
+    },
+    {
+        "name": "phone",
+        "dbType": "string:nullable",
+        "htmlType": "text",
+        "searchable": true
+    },
+    {
+        "name": "email",
+        "dbType": "string:nullable",
+        "htmlType": "email",
+        "validations": "email",
+        "searchable": true
+    },
+    {
+        "name": "observations",
+        "dbType": "text:nullable",
+        "htmlType": "textarea"
     },
     {
         "type": "relation",

@@ -11,19 +11,21 @@
         "inIndex": false
     },
     {
-        "name": "nombre",
+        "name": "title",
         "dbType": "string",
         "htmlType": "text",
-        "searchable": false
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "description",
+        "dbType": "string:nullable",
+        "htmlType": "text",
+        "searchable": false  
     },
     {
         "type": "relation",
         "relation": "1tm,Contact"
-    },
-    {
-        "name": "observacion",
-        "dbType": "string",
-        "htmlType": "text"  
     },
     
     {

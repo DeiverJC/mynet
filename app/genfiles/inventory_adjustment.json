@@ -11,28 +11,50 @@
         "inIndex": false
     },
     {
-        "name": "title",
+        "name": "item_id",
+        "dbType": "integer:unsigned:default,0:foreign,items,id",
+        "htmlType": "text",
+        "relation": "mt1,Item,item_id,id"
+    },
+    {
+        "name": "adjustment_type",
         "dbType": "string",
+        "htmlType": "select,increase,decrease",
+        "validations": "required"
+    },
+    {
+        "name": "current_amount",
+        "dbType": "integer",
         "htmlType": "text",
         "validations": "required",
         "searchable": true
     },
     {
-        "name": "body",
-        "dbType": "text",
-        "htmlType": "textarea"
-    },
-    {
-        "name": "email",
-        "dbType": "string",
-        "htmlType": "email",
+        "name": "amount",
+        "dbType": "integer",
+        "htmlType": "text",
+        "validations": "required",
         "searchable": true
     },
     {
-        "name": "category",
-        "dbType": "string",
-        "htmlType": "select,Technology,LifeStyle,Education,Games",
+        "name": "final_amount",
+        "dbType": "integer",
+        "htmlType": "text",
+        "validations": "required",
         "searchable": true
+    },
+    {
+        "name": "date",
+        "dbType": "timestamp",
+        "htmlType": "date",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "observations",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "searchable": false
     },
     {
         "name": "created_at",

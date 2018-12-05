@@ -26,9 +26,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::resource('typeContacts', 'TypeContactController');
-
-Route::resource('contacts', 'ContactController');
 
 
 
@@ -40,11 +37,6 @@ Route::resource('contacts', 'ContactController');
 
 
 
-Route::resource('contracts', 'ContractController');
-
-Route::resource('articles', 'ArticleController');
-
-Route::resource('articleTypeTypes', 'ArticleType_typeController');
 
 
 
@@ -52,10 +44,17 @@ Route::resource('articleTypeTypes', 'ArticleType_typeController');
 
 
 
-Route::resource('articleTypes', 'ArticleTypeController');
 
 
 
 
 
-Route::resource('contractDetails', 'ContractDetailController');
+
+
+
+
+
+
+
+
+
