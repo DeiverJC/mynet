@@ -1,0 +1,65 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "plazos_pago",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": false
+    },
+    {
+        "name": "contrato_id",
+        "dbType": "integer:unsigned:default,0:foreign,contract_details,id",
+        "htmlType": "text",
+        "relation": "mt1,Contract,contrato_id,id"
+    },
+    {
+        "name": "articulos_id",
+        "dbType": "integer:unsigned:default,0:foreign,contract_details,id",
+        "htmlType": "text",
+        "relation": "mt1,Article,articulos_id,id"
+    },
+    {
+        "name": "valor_mensual",
+        "dbType": "double",
+        "htmlType": "text",
+        "searchable": false
+    },
+    {
+        "name": "iva",
+        "dbType": "string",
+        "htmlType": "select,2%,5%,12%,15%,19%",
+        "searchable": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]

@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Post;
+use App\Models\ArticleType;
 
-class CreatePostRequest extends FormRequest
+class CreateArticleTypeRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class CreatePostRequest extends FormRequest
      */
     public function rules()
     {
-        return Post::$rules;
+        return ArticleType::$rules;
     }
 }

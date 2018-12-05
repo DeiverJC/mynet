@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class ContractRepository
  * @package App\Repositories
- * @version December 4, 2018, 5:17 am UTC
+ * @version December 5, 2018, 12:30 am UTC
  *
  * @method Contract findWithoutFail($id, $columns = ['*'])
  * @method Contract find($id, $columns = ['*'])

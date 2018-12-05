@@ -22,7 +22,7 @@
             <td>{!! $contact->direccion !!}</td>
             <td>{!! $contact->ciudad !!}</td>
             <td>{!! $contact->departamento !!}</td>
-            <td>{!! $contact->tipo_contacto_id !!}</td>
+            <td>{!! $contact->typeContact->nombre!!}</td>
             <td>
                 {!! Form::open(['route' => ['contacts.destroy', $contact->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

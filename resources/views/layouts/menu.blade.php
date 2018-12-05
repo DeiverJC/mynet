@@ -7,12 +7,6 @@
 
 
 
-<li>
-    <a href="{{ route('posts.index') }}" class="waves-effect {{ Request::is('posts*') ? 'active' : '' }}">
-        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Posts</span>
-    </a> 
-</li>
 
  
 
@@ -56,10 +50,42 @@
     </a> 
 </li>
 
+
+
+
+
+
 <li>
     <a href="{{ route('contracts.index') }}" class="waves-effect {{ Request::is('contracts*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
         <span class="hide-menu">Contracts</span>
+    </a> 
+</li>
+
+<li>
+    <a href="{{ route('articles.index') }}" class="waves-effect {{ Request::is('articles*') ? 'active' : '' }}">
+        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
+        <span class="hide-menu">Articles</span>
+    </a> 
+</li>
+
+
+
+
+
+<li>
+    <a href="{{ route('articleTypes.index') }}" class="waves-effect {{ Request::is('articleTypes*') ? 'active' : '' }}">
+        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
+        <span class="hide-menu">Article Types</span>
+    </a> 
+</li>
+
+
+
+<li>
+    <a href="{{ route('contractDetails.index') }}" class="waves-effect {{ Request::is('contractDetails*') ? 'active' : '' }}">
+        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
+        <span class="hide-menu">Contract Details</span>
     </a> 
 </li>
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreatePostsTable extends Migration
+class CreateArticlesTable extends Migration
 {
 
     /**
@@ -13,14 +13,12 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->text('body');
-            $table->string('email');
-            $table->string('category');
+            $table->integer('tipo_art_id')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('tipo_art_id')->references('id')->on('articles');
         });
     }
 
@@ -31,6 +29,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        Schema::drop('articles');
     }
 }

@@ -8,7 +8,7 @@
         "fillable": false,
         "primary": true,
         "inForm": false,
-        "inIndex": false
+        "inIndex": false 
     },
     {
         "name": "tipo_identificacion",

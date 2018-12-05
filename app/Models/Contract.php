@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Contract
  * @package App\Models
- * @version December 4, 2018, 5:17 am UTC
+ * @version December 5, 2018, 12:30 am UTC
  *
  * @property \App\Models\Contact contact
  * @property dateTime fecha_inicio
