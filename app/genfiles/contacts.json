@@ -32,7 +32,14 @@
         "searchable": true
     },
     {
-        "name": "fullname",
+        "name": "firstname",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "lastname",
         "dbType": "string",
         "htmlType": "text",
         "validations": "required",

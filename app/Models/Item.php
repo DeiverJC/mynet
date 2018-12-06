@@ -65,12 +65,12 @@ class Item extends Model
      * @var array
      */
     public static $rules = [
-        'type_item' => 'required',
-        'title' => 'required',
-        'sale_price' => 'required',
-        'tax' => 'required',
-        'unit_measure' => 'required',
-        'unit_price' => 'required'
+        // 'type_item' => 'required',
+        // 'title' => 'required',
+        // 'sale_price' => 'required',
+        // 'tax' => 'required',
+        //'unit_measure' => 'required',
+        //'unit_price' => 'required'
     ];
 
     
