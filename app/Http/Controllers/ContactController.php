@@ -15,7 +15,7 @@ use App\Models\Contact;
 
 class ContactController extends AppBaseController
 {
-    /** @var  ContactRepository */
+    /** @var  ContactRepository */ 
     private $contactRepository;
 
     public function __construct(ContactRepository $contactRepo)

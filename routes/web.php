@@ -71,3 +71,25 @@ Route::resource('contacts', 'ContactController');
 Route::resource('items', 'ItemController');
 
 Route::resource('inventoryAdjustments', 'InventoryAdjustmentController');
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::resource('contracts', 'ContractController');
+
+
+
+
+
+
+
+Route::resource('collectionAccounts', 'CollectionAccountController');

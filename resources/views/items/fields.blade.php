@@ -11,7 +11,7 @@
 
 <!-- Title Field -->
 <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
-    {!! Form::label('title', 'Title:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('title', 'Nombre:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::text('title', null, [
             'class' => 'form-control', 
@@ -26,7 +26,7 @@
 
 <!-- Refence Field -->
 <div class="form-group {{ $errors->has('refence') ? ' has-error' : '' }}">
-    {!! Form::label('refence', 'Refence:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('refence', 'Codígo referencia:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::text('refence', null, [
             'class' => 'form-control', 
@@ -41,7 +41,7 @@
 
 <!-- Sale Price Field -->
 <div class="form-group {{ $errors->has('sale_price') ? ' has-error' : '' }}">
-    {!! Form::label('sale_price', 'Sale Price:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('sale_price', 'Precio de venta:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::text('sale_price', null, [
             'class' => 'form-control', 
@@ -56,7 +56,7 @@
 
 <!-- Description Field -->
 <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
-    {!! Form::label('description', 'Description:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('description', 'Descripción:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::textarea('description', null, ['class' => 'form-control', 'id' => 'description']) !!}
         @if ($errors->has('description'))
@@ -67,9 +67,17 @@
 
 <!-- Tax Field -->
 <div class="form-group {{ $errors->has('tax') ? ' has-error' : '' }}">
-    {!! Form::label('tax', 'Tax:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('tax', 'Impuesto:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
-        {!! Form::select('tax', ['iva' => 'iva', 'iva3' => 'iva3'], null, ['class' => 'form-control', 'id' => 'tax']) !!}
+        {!! Form::select('tax', [
+             '0' => 'Ninguno - (0%)', 
+             '0' => 'IVA - (0%)', 
+             '5' => 'IVA - (5%)', 
+             '19' => 'IVA - (19%)'
+            ], null, [
+                'class' => 'form-control', 
+                'id' => 'tax'                
+        ]) !!}
         @if ($errors->has('tax'))
             <span class="help-block">{{ $errors->first('tax') }}</span> 
         @endif
@@ -78,7 +86,7 @@
 
 <!-- Unit Measure Field -->
 <div class="form-group {{ $errors->has('unit_measure') ? ' has-error' : '' }}">
-    {!! Form::label('unit_measure', 'Unit Measure:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('unit_measure', 'Unidad de medida:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::select('unit_measure', ['metro' => 'metro', 'kilo' => 'kilo'], null, ['class' => 'form-control', 'id' => 'unit_measure']) !!}
         @if ($errors->has('unit_measure'))
@@ -89,7 +97,7 @@
 
 <!-- Unit Price Field -->
 <div class="form-group {{ $errors->has('unit_price') ? ' has-error' : '' }}">
-    {!! Form::label('unit_price', 'Unit Price:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('unit_price', 'Precio unidad:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::text('unit_price', null, [
             'class' => 'form-control', 
@@ -104,7 +112,7 @@
 
 <!-- Initial Amount Field -->
 <div class="form-group {{ $errors->has('initial_amount') ? ' has-error' : '' }}">
-    {!! Form::label('initial_amount', 'Initial Amount:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('initial_amount', 'Cantidad inicial:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
         {!! Form::number('initial_amount', null, ['class' => 'form-control', 'id' => 'initial_amount']) !!}
         @if ($errors->has('initial_amount'))
@@ -120,3 +128,19 @@
         {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
     </div>
 </div>
+
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            $(function() {
+                $("#type_item").change(function(){
+                    if($("option:selected", this).text() == 2){
+                        $(".requerido-con-fisico").show();
+                    }else{
+                        $(".requerido-con-fisico").hide();                
+                    }
+                });
+            });
+        });
+    </script>
+@endpush

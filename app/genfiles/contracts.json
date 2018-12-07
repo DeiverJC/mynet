@@ -12,25 +12,25 @@
     "inIndex": false
 },
 {
-    "name": "fecha_inicio",
+    "name": "start_date",
     "dbType": "dateTime",
     "htmlType": "date",
     "searchable": true
 },
 {
-    "name": "fecha_final",
+    "name": "finish_date",
     "dbType": "dateTime",
     "htmlType": "date",
     "searchable": true
 },
 {
-    "name": "terminos_pago",
+    "name": "term_payment",
     "dbType": "string",
     "htmlType": "select,15 dias,30 dias,60 dias,Manual",
     "searchable": true
 },
 {
-    "name": "contactos_id",
+    "name": "contact_id",
     "dbType": "integer:unsigned:default,0:foreign,contracts,id",
     "htmlType": "text",
     "relation": "mt1,Contact,contactos_id,id"

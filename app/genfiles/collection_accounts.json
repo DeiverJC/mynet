@@ -1,0 +1,83 @@
+[ 
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "contract_id",
+        "dbType": "integer:unsigned:default,0:foreign,collection_accounts,id",
+        "validations": "required",
+        "relation": "mt1,Contract,contract_id,id",
+        "searchable": true
+    },
+
+    {
+        "name": "creation",
+        "dbType": "dateTime",
+        "htmlType": "date",
+        "searchable": true
+    },
+    {
+        "name": "expiration",
+        "dbType": "dateTime",
+        "htmlType": "date",
+        "searchable": true
+    },
+    {
+        "name": "total",
+        "dbType": "double:default,0",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "paid",
+        "dbType": "double:default,0",
+        "htmlType": "text",
+        "searchable": true
+    },
+    {
+        "name": "to_pay",
+        "dbType": "double:default,0",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "state",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]

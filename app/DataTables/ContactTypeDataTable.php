@@ -42,8 +42,8 @@ class ContactTypeDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px'])
-            ->parameters([
+            ->addAction(['width' => '120px']);
+            /*->parameters([
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
@@ -53,7 +53,7 @@ class ContactTypeDataTable extends DataTable
                     ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
                 ],
-            ]);
+            ]);*/
     }
 
     /**
@@ -64,8 +64,12 @@ class ContactTypeDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'title',
-            'description'
+            'title' => [
+                'title' => 'Título'
+            ],
+            'description' => [
+                'title' => 'Descripción'
+            ],
         ];
     }
 
