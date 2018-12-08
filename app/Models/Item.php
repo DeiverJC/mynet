@@ -72,5 +72,13 @@ class Item extends Model
         'unit_price' => 'required'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     **/
+    public function contracts()
+    {
+        return $this->belongsToMany(\App\Models\Contract::class);
+    }
+
     
 }

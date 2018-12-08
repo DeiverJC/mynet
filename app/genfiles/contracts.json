@@ -1,60 +1,72 @@
 
 [
-{
-    "name": "id",
-    "dbType": "increments",
-    "htmlType": "",
-    "validations": "",
-    "searchable": false,
-    "fillable": false,
-    "primary": true,
-    "inForm": false,
-    "inIndex": false
-},
-{
-    "name": "start_date",
-    "dbType": "dateTime",
-    "htmlType": "date",
-    "searchable": true
-},
-{
-    "name": "finish_date",
-    "dbType": "dateTime",
-    "htmlType": "date",
-    "searchable": true
-},
-{
-    "name": "term_payment",
-    "dbType": "string",
-    "htmlType": "select,15 dias,30 dias,60 dias,Manual",
-    "searchable": true
-},
-{
-    "name": "contact_id",
-    "dbType": "integer:unsigned:default,0:foreign,contracts,id",
-    "htmlType": "text",
-    "relation": "mt1,Contact,contactos_id,id"
-},
-{
-    "name": "created_at",
-    "dbType": "timestamp",
-    "htmlType": "",
-    "validations": "",
-    "searchable": false,
-    "fillable": false,
-    "primary": false,
-    "inForm": false,
-    "inIndex": false
-},
-{
-    "name": "updated_at",
-    "dbType": "timestamp",
-    "htmlType": "",
-    "validations": "",
-    "searchable": false,
-    "fillable": false,
-    "primary": false,
-    "inForm": false,
-    "inIndex": false
-}
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "contact_id",
+        "dbType": "integer:unsigned:default,0:foreign,contacts,id",
+        "htmlType": "text",
+        "relation": "mt1,Contact,contact_id,id"
+    },
+
+    {
+        "name": "start_date",
+        "dbType": "date",
+        "htmlType": "date",
+        "searchable": true,
+        "validations": "required"
+    },
+    {
+        "name": "finish_date",
+        "dbType": "date:default,0",
+        "htmlType": "date",
+        "searchable": true
+    },
+    {
+        "name": "status",
+        "dbType": "integer",
+        "htmlType": "select,Activo:active,Suspendido:suspended,Cancelado:canceled",
+        "searchable": true
+    },
+    {
+        "name": "payment_term",
+        "dbType": "integer",
+        "htmlType": "select,Ninguno:0,8 días:8,15 días:15,30 días:30,60 días:60",
+        "searchable": true
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,Item,contract_item,item_id,contract_id"
+    },    
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
 ]
