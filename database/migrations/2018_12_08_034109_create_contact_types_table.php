@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateContractsTable extends Migration
+class CreateContactTypesTable extends Migration
 {
 
     /**
@@ -13,15 +13,12 @@ class CreateContractsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contracts', function (Blueprint $table) {
+        Schema::create('contact_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->dateTime('start_date');
-            $table->dateTime('finish_date');
-            $table->string('term_payment');
-            $table->integer('contact_id')->unsigned()->default(0);
+            $table->string('title');
+            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('contact_id')->references('id')->on('contracts');
         });
     }
 
@@ -32,6 +29,6 @@ class CreateContractsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('contracts');
+        Schema::drop('contact_types');
     }
 }

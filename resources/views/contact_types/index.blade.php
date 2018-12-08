@@ -3,7 +3,7 @@
 @section('title', 'Contact Types')
 
 @section('breadcrumb')
-    <li class="active">Tipos de contactos</li>
+    <li class="active">Contact Types</li>
 @endsection
 
 @section('content')

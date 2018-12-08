@@ -30,11 +30,19 @@
     </div>
 </div>
 
-<!-- Fullname Field -->
+<!-- Firstname Field -->
 <div class="form-group">
-    {!! Form::label('fullname', 'Fullname:', ['class' => 'control-label col-md-3']) !!}
+    {!! Form::label('firstname', 'Firstname:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
-        <p class="form-control-static">{!! $contact->fullname !!}</p>
+        <p class="form-control-static">{!! $contact->firstname !!}</p>
+    </div>
+</div>
+
+<!-- Lastname Field -->
+<div class="form-group">
+    {!! Form::label('lastname', 'Lastname:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        <p class="form-control-static">{!! $contact->lastname !!}</p>
     </div>
 </div>
 

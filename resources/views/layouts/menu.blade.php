@@ -6,7 +6,7 @@
 </li>
 
 <li>
-    <a href="{{ route('home') }}" class="waves-effect  {{ Request::is('contacts*') ? 'active' : '' }}">
+    <a href="{{ route('home') }}" class="waves-effect  {{ Request::is('contacts*') || Request::is('contactTypes*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
         <span class="hide-menu">Contactos<span class="fa arrow"></span></span>
     </a>
@@ -26,23 +26,9 @@
                 <span class="hide-menu">Proveedores</span>
             </a>
         </li>
-    </ul>
-</li>
-
-<li>
-    <a href="{{ route('home') }}" class="waves-effect  {{ Request::is('contacts*') ? 'active' : '' }}">
-        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Inventario<span class="fa arrow"></span></span>
-    </a>
-    <ul class="nav nav-second-level">
         <li>
-            <a href="{{ route('items.index') }}" >
-                <span class="hide-menu">Items</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('inventoryAdjustments.index') }}">
-                <span class="hide-menu">Ajuste de items</span>
+            <a href="{{ route('contactTypes.index') }}" class="{{ Request::is('contactTypes*') ? 'active' : '' }}">
+                <span class="hide-menu">Ajustes</span>
             </a>
         </li>
     </ul>
@@ -50,20 +36,18 @@
 
 
 
+{{-- 
 <li>
-    <a href="{{ route('contracts.index') }}" class="waves-effect {{ Request::is('contracts*') ? 'active' : '' }}">
+    <a href="{{ route('contacts.index') }}" class="waves-effect {{ Request::is('contacts*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Contracts</span>
+        <span class="hide-menu">Contactos</span>
     </a> 
 </li>
 
-
-
-
 <li>
-    <a href="{{ route('collectionAccounts.index') }}" class="waves-effect {{ Request::is('collectionAccounts*') ? 'active' : '' }}">
+    <a href="{{ route('contactTypes.index') }}" class="waves-effect {{ Request::is('contactTypes*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Collection Accounts</span>
+        <span class="hide-menu">Contact Types</span>
     </a> 
 </li>
-
+ --}}

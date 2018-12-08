@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\DataTables;
 
@@ -42,8 +42,8 @@ class ContactDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px']);
-            /*->parameters([
+            ->addAction(['width' => '120px'])
+            ->parameters([
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
@@ -53,7 +53,7 @@ class ContactDataTable extends DataTable
                     ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
                 ],
-            ]);*/
+            ]);
     }
 
     /**
@@ -64,15 +64,14 @@ class ContactDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'type_contact_id' => [
-                'title' => 'Tipo de contacto',
-            ],
+            'type_contact_id',
             //'type_identification',
             'indentification',
-            'fullname',
-            'address',
+            'firstname',
+            'lastname',
+            //'address',
             //'state',
-            'city',
+            //'city',
             'cellphone',
             //'phone',
             'email',

@@ -17,11 +17,7 @@
 <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
     {!! Form::label('description', 'Description:', ['class' => 'control-label col-md-3']) !!}
     <div class="col-md-9">
-        {!! Form::text('description', null, [
-            'class' => 'form-control', 
-            'id' => 'description', 
-            'placeholder' => 'Description'
-        ]) !!}
+        {!! Form::textarea('description', null, ['class' => 'form-control', 'id' => 'description']) !!}
         @if ($errors->has('description'))
             <span class="help-block">{{ $errors->first('description') }}</span> 
         @endif

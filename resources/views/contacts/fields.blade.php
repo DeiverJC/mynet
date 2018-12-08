@@ -1,24 +1,23 @@
+<!-- Type Contact Id Field -->
+<div class="form-group {{ $errors->has('type_contact_id') ? ' has-error' : '' }}">
+    {!! Form::label('type_contact_id', 'Type Contact Id:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        {!! Form::text('type_contact_id', null, [
+            'class' => 'form-control', 
+            'id' => 'type_contact_id', 
+            'placeholder' => 'Type Contact Id'
+        ]) !!}
+        @if ($errors->has('type_contact_id'))
+            <span class="help-block">{{ $errors->first('type_contact_id') }}</span> 
+        @endif
+    </div>
+</div>
+
 <!-- Type Identification Field -->
 <div class="form-group {{ $errors->has('type_identification') ? ' has-error' : '' }}">
-    {!! Form::label('type_identification', 'Tipo de identificación*:', [
-        'class' => 'control-label col-md-4']
-    ) !!}
-    <div class="col-md-8">
-        {!! Form::select('type_identification', [
-                'NIT' => 'Número de identificación tributaria',
-                'CC' => 'Cédula de ciudadanía',
-                'DIE' => 'Documento de identificación extrajero',
-                'PP' => 'Pasaporte',
-                'CE' => 'Cédula de extranjería',
-                'TE' => 'Tarjeta de extranjería',
-                'TI' => 'Tarjeta de identidad',
-                'RC' => 'Registro civil'
-            ],
-            null, [
-            'class' => 'form-control',
-            'required' => 'required',
-            'placeholder' => 'Elija una opción...'
-        ]) !!}
+    {!! Form::label('type_identification', 'Type Identification:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        {!! Form::select('type_identification', ['Registro civil' => 'RC', 'Tarjeta de identidad' => 'TI', 'Cedula de ciudadania' => 'CC'], null, ['class' => 'form-control', 'id' => 'type_identification']) !!}
         @if ($errors->has('type_identification'))
             <span class="help-block">{{ $errors->first('type_identification') }}</span> 
         @endif
@@ -27,8 +26,8 @@
 
 <!-- Indentification Field -->
 <div class="form-group {{ $errors->has('indentification') ? ' has-error' : '' }}">
-    {!! Form::label('indentification', 'Identificación:', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('indentification', 'Indentification:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::number('indentification', null, ['class' => 'form-control', 'id' => 'indentification']) !!}
         @if ($errors->has('indentification'))
             <span class="help-block">{{ $errors->first('indentification') }}</span> 
@@ -36,25 +35,40 @@
     </div>
 </div>
 
-<!-- Fullname Field -->
-<div class="form-group {{ $errors->has('fullname') ? ' has-error' : '' }}">
-    {!! Form::label('fullname', 'Nombre y apellido*', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
-        {!! Form::text('fullname', null, [
+<!-- Firstname Field -->
+<div class="form-group {{ $errors->has('firstname') ? ' has-error' : '' }}">
+    {!! Form::label('firstname', 'Firstname:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        {!! Form::text('firstname', null, [
             'class' => 'form-control', 
-            'id' => 'fullname', 
-            'placeholder' => 'Fullname'
+            'id' => 'firstname', 
+            'placeholder' => 'Firstname'
         ]) !!}
-        @if ($errors->has('fullname'))
-            <span class="help-block">{{ $errors->first('fullname') }}</span> 
+        @if ($errors->has('firstname'))
+            <span class="help-block">{{ $errors->first('firstname') }}</span> 
+        @endif
+    </div>
+</div>
+
+<!-- Lastname Field -->
+<div class="form-group {{ $errors->has('lastname') ? ' has-error' : '' }}">
+    {!! Form::label('lastname', 'Lastname:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
+        {!! Form::text('lastname', null, [
+            'class' => 'form-control', 
+            'id' => 'lastname', 
+            'placeholder' => 'Lastname'
+        ]) !!}
+        @if ($errors->has('lastname'))
+            <span class="help-block">{{ $errors->first('lastname') }}</span> 
         @endif
     </div>
 </div>
 
 <!-- Address Field -->
 <div class="form-group {{ $errors->has('address') ? ' has-error' : '' }}">
-    {!! Form::label('address', 'Dirección:*', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('address', 'Address:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::text('address', null, [
             'class' => 'form-control', 
             'id' => 'address', 
@@ -68,8 +82,8 @@
 
 <!-- State Field -->
 <div class="form-group {{ $errors->has('state') ? ' has-error' : '' }}">
-    {!! Form::label('state', 'Departamento*', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('state', 'State:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::text('state', null, [
             'class' => 'form-control', 
             'id' => 'state', 
@@ -83,8 +97,8 @@
 
 <!-- City Field -->
 <div class="form-group {{ $errors->has('city') ? ' has-error' : '' }}">
-    {!! Form::label('city', 'Municipio:', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('city', 'City:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::text('city', null, [
             'class' => 'form-control', 
             'id' => 'city', 
@@ -98,8 +112,8 @@
 
 <!-- Cellphone Field -->
 <div class="form-group {{ $errors->has('cellphone') ? ' has-error' : '' }}">
-    {!! Form::label('cellphone', 'Celular:', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('cellphone', 'Cellphone:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::text('cellphone', null, [
             'class' => 'form-control', 
             'id' => 'cellphone', 
@@ -113,8 +127,8 @@
 
 <!-- Phone Field -->
 <div class="form-group {{ $errors->has('phone') ? ' has-error' : '' }}">
-    {!! Form::label('phone', 'Teléfono:', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('phone', 'Phone:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::text('phone', null, [
             'class' => 'form-control', 
             'id' => 'phone', 
@@ -128,33 +142,19 @@
 
 <!-- Email Field -->
 <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-    {!! Form::label('email', 'Correo electrónico:', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('email', 'Email:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::email('email', null, ['class' => 'form-control', 'id' => 'email']) !!}
         @if ($errors->has('email'))
             <span class="help-block">{{ $errors->first('email') }}</span> 
         @endif
     </div>
 </div>
-<!-- Type Contact Id Field -->
-<div class="form-group {{ $errors->has('type_contact_id') ? ' has-error' : '' }}">
-        {!! Form::label('type_contact_id', 'Type Contact Id:', ['class' => 'control-label col-md-4']) !!}
-        <div class="col-md-8">
-            {!! Form::select('type_contact_id', $typeContacts, null, [
-                'class' => 'form-control', 
-                'id' => 'type_contact_id',
-                'placeholder' => 'Elija una opción'
-            ]) !!}
-            @if ($errors->has('type_contact_id'))
-                <span class="help-block">{{ $errors->first('type_contact_id') }}</span> 
-            @endif
-        </div>
-    </div>
 
 <!-- Observations Field -->
 <div class="form-group {{ $errors->has('observations') ? ' has-error' : '' }}">
-    {!! Form::label('observations', 'Observations:', ['class' => 'control-label col-md-4']) !!}
-    <div class="col-md-8">
+    {!! Form::label('observations', 'Observations:', ['class' => 'control-label col-md-3']) !!}
+    <div class="col-md-9">
         {!! Form::textarea('observations', null, ['class' => 'form-control', 'id' => 'observations']) !!}
         @if ($errors->has('observations'))
             <span class="help-block">{{ $errors->first('observations') }}</span> 

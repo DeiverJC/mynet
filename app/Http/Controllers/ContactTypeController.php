@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\ContactTypeDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateContactTypeRequest;
 use App\Http\Requests\UpdateContactTypeRequest;
 use App\Repositories\ContactTypeRepository;
-use Flash;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Http\Request;
+use Flash;
+use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
 class ContactTypeController extends AppBaseController
@@ -24,12 +24,16 @@ class ContactTypeController extends AppBaseController
     /**
      * Display a listing of the ContactType.
      *
-     * @param ContactTypeDataTable $contactTypeDataTable
+     * @param Request $request
      * @return Response
      */
-    public function index(ContactTypeDataTable $contactTypeDataTable)
+    public function index(Request $request)
     {
-        return $contactTypeDataTable->render('contact_types.index');
+        $this->contactTypeRepository->pushCriteria(new RequestCriteria($request));
+        $contactTypes = $this->contactTypeRepository->all();
+
+        return view('contact_types.index')
+            ->with('contactTypes', $contactTypes);
     }
 
     /**

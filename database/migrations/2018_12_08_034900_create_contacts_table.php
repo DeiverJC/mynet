@@ -17,8 +17,9 @@ class CreateContactsTable extends Migration
             $table->increments('id');
             $table->integer('type_contact_id')->unsigned()->default(0);
             $table->string('type_identification');
-            $table->integer('indentification');
-            $table->string('fullname');
+            $table->bigInteger('indentification');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('address');
             $table->string('state');
             $table->string('city');

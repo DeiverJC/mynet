@@ -19,8 +19,8 @@
     },
     {
         "name": "description",
-        "dbType": "string:nullable",
-        "htmlType": "text",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
         "searchable": false  
     },
     {

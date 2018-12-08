@@ -13,7 +13,7 @@
     <div class="col-sm-12">
         <div class="white-box">
             <h3 class="box-title m-b-0">
-                Contactos
+                Contacts
                 <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('contacts.create') !!}">
                     Agregar nuevo
                 </a>

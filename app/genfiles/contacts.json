@@ -20,7 +20,7 @@
     {
         "name": "type_identification",
         "dbType": "string",
-        "htmlType": "select,NIT,CEDULA DE CIUDADANIA, CEDULA DE ESTRANJERIA,TARJETA DE IDENTIDAD,RUT",
+        "htmlType": "select,RC:Registro civil,TI:Tarjeta de identidad,CC:Cedula de ciudadania",
         "validations": "required",
         "searchable": true
     },

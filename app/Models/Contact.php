@@ -8,13 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Contact
  * @package App\Models
- * @version December 5, 2018, 5:00 am UTC
+ * @version December 8, 2018, 3:49 am UTC
  *
  * @property \App\Models\TypeContact typeContact
  * @property integer type_contact_id
  * @property string type_identification
  * @property integer indentification
- * @property string fullname
+ * @property string firstname
+ * @property string lastname
  * @property string address
  * @property string state
  * @property string city
@@ -37,7 +38,8 @@ class Contact extends Model
         'type_contact_id',
         'type_identification',
         'indentification',
-        'fullname',
+        'firstname',
+        'lastname',
         'address',
         'state',
         'city',
@@ -56,7 +58,8 @@ class Contact extends Model
         'type_contact_id' => 'integer',
         'type_identification' => 'string',
         'indentification' => 'integer',
-        'fullname' => 'string',
+        'firstname' => 'string',
+        'lastname' => 'string',
         'address' => 'string',
         'state' => 'string',
         'city' => 'string',
@@ -75,7 +78,8 @@ class Contact extends Model
         'type_contact_id' => 'required',
         'type_identification' => 'required',
         'indentification' => 'required',
-        'fullname' => 'required',
+        'firstname' => 'required',
+        'lastname' => 'required',
         'address' => 'required',
         'state' => 'required',
         'city' => 'required',
