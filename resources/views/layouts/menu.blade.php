@@ -34,20 +34,32 @@
     </ul>
 </li>
 
-
-
-{{-- 
 <li>
-    <a href="{{ route('contacts.index') }}" class="waves-effect {{ Request::is('contacts*') ? 'active' : '' }}">
+    <a href="{{ route('home') }}" class="waves-effect  {{ Request::is('items*') || Request::is('inventoryAdjustments*') ? 'active' : '' }}">
         <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Contactos</span>
-    </a> 
+        <span class="hide-menu">Inventario<span class="fa arrow"></span></span>
+    </a>
+    <ul class="nav nav-second-level">
+        <li>
+            <a href="{{ route('items.index') }}" class="{{ Request::is('items*') ? 'active' : '' }}">
+                <span class="hide-menu">Todos los articulos</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="hide-menu">Servicios</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="hide-menu">Productos</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('inventoryAdjustments.index') }}" class="{{ Request::is('contactTypes*') ? 'active' : '' }}">
+                <span class="hide-menu">Ajustes de inventario</span>
+            </a>
+        </li>
+    </ul>
 </li>
 
-<li>
-    <a href="{{ route('contactTypes.index') }}" class="waves-effect {{ Request::is('contactTypes*') ? 'active' : '' }}">
-        <i data-icon="7" class="linea-icon linea-basic fa-fw"></i>
-        <span class="hide-menu">Contact Types</span>
-    </a> 
-</li>
- --}}

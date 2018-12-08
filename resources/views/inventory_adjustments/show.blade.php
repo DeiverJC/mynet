@@ -1,0 +1,41 @@
+@extends('layouts.app')
+
+@section('title', 'Ver Inventory Adjustments')
+
+@section('breadcrumb')
+    <li class="breadcrumb-item "><a href="{{ route('inventoryAdjustments.index') }}">Inventory Adjustments</a></li>
+    <li class="breadcrumb-item active">{{ $inventoryAdjustment->id }}</li>
+@endsection  
+
+@section('content')
+    <div class="col-md-6">
+        <div class="white-box">
+            <h3 class="box-title m-b-0">Inventory Adjustment</h3>
+            <p class="text-muted m-b-30 font-13"> Lorem ipsum ... </p>
+            <form class="form-horizontal" role="form">
+                <div class="form-body">
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            @include('inventory_adjustments.show_fields')
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn btn-info"> <i class="fa fa-pencil"></i> Edit</button>
+                                    <button type="button" class="btn btn-default">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+@endsection

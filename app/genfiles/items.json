@@ -11,11 +11,9 @@
         "inIndex": false
     },
     {
-        "name": "type_item",
-        "dbType": "string",
-        "htmlType": "select,Servicios:1,Productos:2",
-        "searchable": true,
-        "validations": "required"
+        "name": "is_inventorial",
+        "dbType": "boolean",
+        "htmlType": "checkbox:0"
     },
     {
         "name": "title",
@@ -25,7 +23,7 @@
         "searchable": true
     },
     {
-        "name": "refence",
+        "name": "refence_code",
         "dbType": "string:nullable",
         "htmlType": "text",
         "searchable": true
@@ -45,15 +43,15 @@
     },
     {
         "name": "tax",
-        "dbType": "string",
-        "htmlType": "select,iva,iva3",
+        "dbType": "integer",
+        "htmlType": "select,Ninguno - (0%):0,IVA - (0%):0,IVA - (5%):5,IVA - (19%):19",
         "validations": "required",
         "searchable": true
     },
     {
         "name": "unit_measure",
         "dbType": "string",
-        "htmlType": "select,metro,kilo",
+        "htmlType": "select,Ninguno:,Metro:MT,Kilogramos:Kg",
         "validations": "required",
         "searchable": true
     },

@@ -60,3 +60,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('contactTypes', 'ContactTypeController');
 
 Route::resource('contacts', 'ContactController');
+
+
+
+Route::resource('items', 'ItemController');
+
+Route::resource('inventoryAdjustments', 'InventoryAdjustmentController');
